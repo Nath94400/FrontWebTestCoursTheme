@@ -10,4 +10,4 @@ export const name = 'SvelteKit Blog Template' // replace with your name
 /**
  * Used for SEO in /posts/[slug]
  */
-export const website = 'https://yourdomain.com'
+export const website = 'https://front-web-test-cours-theme-90lfegwum-nath94400.vercel.app/'

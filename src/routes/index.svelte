@@ -43,6 +43,7 @@
       View on GitHub
       <slot slot="icon-end" />
     </ButtonLink>
+    <ButtonLink size="large" href="video.svelte"> Go To Video</ButtonLink>
   </div>
 
   <h2>

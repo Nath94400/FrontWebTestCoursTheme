@@ -49,6 +49,11 @@
     Nombre total de post : {allPosts.length}
   </h2>
 
+  {#each allPosts as post}
+    <h5>
+      {post['title']} - {post['date']}
+    </h5>
+  {/each}
   <!-- recent posts -->
   <h2 class="flex items-baseline gap-4 !mb-2">
     Recent Posts

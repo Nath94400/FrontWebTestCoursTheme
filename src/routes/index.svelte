@@ -4,7 +4,8 @@
   export const load = async ({ fetch }) => {
     return {
       props: {
-        recentPosts: await fetch('/posts.json?limit=2').then((res) => res.json())
+        recentPosts: await fetch('/posts.json?limit=2').then((res) => res.json()),
+        allPosts: await fetch('/posts.json').then((res) => res.json()),
       }
     }
   }
@@ -16,6 +17,8 @@
   import { name } from '$lib/info.js'
 
   export let recentPosts
+  export let allPosts
+  console.log({recentPosts, allPosts})
 </script>
 
 <svelte:head>
@@ -41,6 +44,10 @@
       <slot slot="icon-end" />
     </ButtonLink>
   </div>
+
+  <h2>
+    Nombre total de post : {allPosts.length}
+  </h2>
 
   <!-- recent posts -->
   <h2 class="flex items-baseline gap-4 !mb-2">
